@@ -4,7 +4,7 @@
 #
 Name     : pypi-pyro4
 Version  : 4.82
-Release  : 33
+Release  : 34
 URL      : https://files.pythonhosted.org/packages/2e/0b/e1066a2ba154a1fd6ade41b35d38482fc399feb90fe4768ce8d6d3eb368c/Pyro4-4.82.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2e/0b/e1066a2ba154a1fd6ade41b35d38482fc399feb90fe4768ce8d6d3eb368c/Pyro4-4.82.tar.gz
 Summary  : distributed object middleware for Python (RPC)
@@ -14,11 +14,8 @@ Requires: pypi-pyro4-bin = %{version}-%{release}
 Requires: pypi-pyro4-license = %{version}-%{release}
 Requires: pypi-pyro4-python = %{version}-%{release}
 Requires: pypi-pyro4-python3 = %{version}-%{release}
-Requires: serpent
+Requires: pypi(serpent)
 BuildRequires : buildreq-distutils3
-Provides: Pyro4
-Provides: Pyro4-python
-Provides: Pyro4-python3
 BuildRequires : pypi(selectors34)
 BuildRequires : pypi(serpent)
 
@@ -57,7 +54,6 @@ Summary: python3 components for the pypi-pyro4 package.
 Group: Default
 Requires: python3-core
 Provides: pypi(pyro4)
-Requires: pypi(selectors34)
 Requires: pypi(serpent)
 
 %description python3
@@ -73,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641478187
+export SOURCE_DATE_EPOCH=1641842697
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
